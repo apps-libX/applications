@@ -1,20 +1,9 @@
 {
-  "components-directory" : "app_components",
-
-  "distributions": {
-    "vendor": "distributions",
-    "package" : [
-      "applications"
-    ]
+  "app-components-directory": "app_components",
+  "require"             : {
+    "anwendungen/applications": "@dev"
   },
-  "applications": {
-    "vendor": "anwendungen",
-    "package": [
-      "applications"
-    ]
-  },
-  "components": {
-    "vendor" : "onderdelen",
-    "package": []
+  "require-dev"         : {
+    "consigliere/generators": "@dev"
   }
 }
