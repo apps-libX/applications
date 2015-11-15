@@ -1,0 +1,20 @@
+{
+  "components-directory" : "app_components",
+
+  "distributions": {
+    "vendor": "distributions",
+    "package" : [
+      "applications"
+    ]
+  },
+  "applications": {
+    "vendor": "anwendungen",
+    "package": [
+      "applications"
+    ]
+  },
+  "components": {
+    "vendor" : "onderdelen",
+    "package": []
+  }
+}

@@ -4,4 +4,4 @@ Homestead.yaml
 Homestead.json
 .env
 /bower_components
-/dev_packages
+/app_components
