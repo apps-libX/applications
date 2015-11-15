@@ -1,7 +1,7 @@
-/workbench
 /vendor
 /node_modules
 Homestead.yaml
 Homestead.json
 .env
 /bower_components
+/dev_packages

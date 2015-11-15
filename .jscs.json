@@ -1,12 +1,12 @@
 {
-  "requireCurlyBraces": [
+  "requireCurlyBraces"                      : [
     "if",
     "else",
     "for",
     "while",
     "do"
   ],
-  "requireSpaceAfterKeywords": [
+  "requireSpaceAfterKeywords"               : [
     "if",
     "for",
     "while",
@@ -14,14 +14,14 @@
     "switch",
     "return"
   ],
-  "disallowSpacesInFunctionExpression": {
+  "disallowSpacesInFunctionExpression"      : {
     "beforeOpeningRoundBrace": true
   },
-  "disallowTrailingWhitespace": true,
-  "disallowMixedSpacesAndTabs": true,
-  "requireMultipleVarDecl": true,
-  "requireSpacesInsideObjectBrackets": "all",
-  "requireSpaceBeforeBinaryOperators": [
+  "disallowTrailingWhitespace"              : true,
+  "disallowMixedSpacesAndTabs"              : true,
+  "requireMultipleVarDecl"                  : true,
+  "requireSpacesInsideObjectBrackets"       : "all",
+  "requireSpaceBeforeBinaryOperators"       : [
     "+",
     "-",
     "/",
@@ -32,7 +32,7 @@
     "!=",
     "!=="
   ],
-  "disallowSpaceAfterPrefixUnaryOperators": [
+  "disallowSpaceAfterPrefixUnaryOperators"  : [
     "++",
     "--",
     "+",
@@ -42,13 +42,16 @@
     "++",
     "--"
   ],
-  "disallowKeywords": [
+  "disallowKeywords"                        : [
     "with"
   ],
-  "disallowMultipleLineBreaks": true,
-  "disallowKeywordsOnNewLine": [
+  "disallowMultipleLineBreaks"              : true,
+  "disallowKeywordsOnNewLine"               : [
     "else"
   ],
-  "disallowSpaceAfterObjectKeys": "ignoreMultiLine",
-  "excludeFiles": ["node_modules/**", "js/vendor/**"]
+  "disallowSpaceAfterObjectKeys"            : "ignoreMultiLine",
+  "excludeFiles"                            : [
+    "node_modules/**",
+    "js/vendor/**"
+  ]
 }
