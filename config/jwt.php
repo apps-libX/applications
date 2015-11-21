@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'secret' => env('JWT_SECRET', '3Sox3lEPzeQsNLUnrNf9Tgyh3DFK6DIE'),
+    'secret'            => env('JWT_SECRET', '3Sox3lEPzeQsNLUnrNf9Tgyh3DFK6DIE'),
 
     /*
     |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'ttl' => 60,
+    'ttl'               => 60,
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'refresh_ttl' => 20160,
+    'refresh_ttl'       => 20160,
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'algo' => 'HS256',
+    'algo'              => 'HS256',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'user' => 'App\User',
+    'user'              => 'App\User',
 
     /*
     |--------------------------------------------------------------------------
@@ -76,7 +76,7 @@ return [
     |
     */
 
-    'identifier' => 'id',
+    'identifier'        => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -89,7 +89,7 @@ return [
     |
     */
 
-    'required_claims' => ['iss', 'iat', 'exp', 'nbf', 'sub', 'jti'],
+    'required_claims'   => ['iss', 'iat', 'exp', 'nbf', 'sub', 'jti'],
 
     /*
     |--------------------------------------------------------------------------
@@ -112,7 +112,7 @@ return [
     |
     */
 
-    'providers' => [
+    'providers'         => [
 
         /*
         |--------------------------------------------------------------------------
@@ -124,7 +124,7 @@ return [
         |
         */
 
-        'user' => 'Tymon\JWTAuth\Providers\User\EloquentUserAdapter',
+        'user'    => 'Tymon\JWTAuth\Providers\User\EloquentUserAdapter',
 
         /*
         |--------------------------------------------------------------------------
@@ -135,7 +135,7 @@ return [
         |
         */
 
-        'jwt' => 'Tymon\JWTAuth\Providers\JWT\NamshiAdapter',
+        'jwt'     => 'Tymon\JWTAuth\Providers\JWT\NamshiAdapter',
 
         /*
         |--------------------------------------------------------------------------
@@ -146,7 +146,7 @@ return [
         |
         */
 
-        'auth' => function ($app) {
+        'auth'    => function ($app) {
             return new Tymon\JWTAuth\Providers\Auth\IlluminateAuthAdapter($app['auth']);
         },
 
@@ -161,8 +161,8 @@ return [
 
         'storage' => function ($app) {
             return new Tymon\JWTAuth\Providers\Storage\IlluminateCacheAdapter($app['cache']);
-        }
+        },
 
-    ]
+    ],
 
 ];

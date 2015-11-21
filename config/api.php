@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'standardsTree' => env('API_STANDARDS_TREE', 'x'),
+    'standardsTree'      => env('API_STANDARDS_TREE', 'x'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,7 +32,7 @@ return [
     |
     */
 
-    'subtype' => env('API_SUBTYPE', ''),
+    'subtype'            => env('API_SUBTYPE', 'laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'version' => env('API_VERSION', 'v1'),
+    'version'            => env('API_VERSION', 'v1'),
 
     /*
     |--------------------------------------------------------------------------
@@ -57,7 +57,7 @@ return [
     |
     */
 
-    'prefix' => env('API_PREFIX', null),
+    'prefix'             => env('API_PREFIX', 'api'),
 
     /*
     |--------------------------------------------------------------------------
@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'domain' => env('API_DOMAIN', null),
+    'domain'             => env('API_DOMAIN', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +82,7 @@ return [
     |
     */
 
-    'name' => env('API_NAME', null),
+    'name'               => env('API_NAME', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ return [
     |
     */
 
-    'strict' => env('API_STRICT', false),
+    'strict'             => env('API_STRICT', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -122,7 +122,7 @@ return [
     |
     */
 
-    'debug' => env('API_DEBUG', false),
+    'debug'              => env('API_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -136,12 +136,12 @@ return [
     |
     */
 
-    'errorFormat' => [
-        'message' => ':message',
-        'errors' => ':errors',
-        'code' => ':code',
+    'errorFormat'        => [
+        'message'     => ':message',
+        'errors'      => ':errors',
+        'code'        => ':code',
         'status_code' => ':status_code',
-        'debug' => ':debug',
+        'debug'       => ':debug',
     ],
 
     /*
@@ -154,8 +154,8 @@ return [
     |
     */
 
-    'auth' => [
-
+    'auth'               => [
+        'jwt' => 'Dingo\Api\Auth\Provider\JWT',
     ],
 
     /*
@@ -169,7 +169,7 @@ return [
     |
     */
 
-    'throttling' => [
+    'throttling'         => [
 
     ],
 
@@ -185,7 +185,7 @@ return [
     |
     */
 
-    'transformer' => env('API_TRANSFORMER', Dingo\Api\Transformer\Adapter\Fractal::class),
+    'transformer'        => env('API_TRANSFORMER', Dingo\Api\Transformer\Adapter\Fractal::class),
 
     /*
     |--------------------------------------------------------------------------
@@ -198,12 +198,10 @@ return [
     |
     */
 
-    'defaultFormat' => env('API_DEFAULT_FORMAT', 'json'),
+    'defaultFormat'      => env('API_DEFAULT_FORMAT', 'json'),
 
-    'formats' => [
-
+    'formats'            => [
         'json' => Dingo\Api\Http\Response\Format\Json::class,
-
     ],
 
 ];
