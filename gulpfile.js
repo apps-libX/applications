@@ -18,9 +18,10 @@ elixir(function(mix){
 	'use strict';
 
 	mix
-		.angular('./singlepage/**/')
-		.sass('./singlepage/**/**/**/*.scss', 'public/css')
-		.copy('./singlepage/**/**/**/*.html', 'public/views/');
+		.bower()
+		.angular('./app_component/**/**/angular/')
+		.sass('./app_component/**/**/angular/**/**/**/*.scss', 'public/css')
+		.copy('./app_component/**/**/angular/**/**/**/*.html', 'public/views/');
 });
 
 /*
