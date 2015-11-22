@@ -21,11 +21,12 @@ Elixir.extend('angular', function(src, output, outputFilename) {
 
     'use strict';
 
-    var baseDir = src || Elixir.config.assetsPath + '/angular/';
+    //var baseDir = src || Elixir.config.assetsPath + '/angular/';
+    var srcDir = src || Elixir.config.assetsPath + '/angular/';
 
-    new Task('angular in ' + baseDir, function() {
+    new Task('angular in ' + srcDir, function() {
         // Main file has to be included first.
-        return gulp.src([baseDir + "*.js", baseDir + "**/**/**/*.js"])
+        return gulp.src(srcDir)
             .pipe(jshint())
             .pipe(jshint.reporter(stylish))
             //.pipe(jshint.reporter('fail')).on('error', onError) //enable this if you want to force jshint to validate
@@ -41,6 +42,6 @@ Elixir.extend('angular', function(src, output, outputFilename) {
                 icon    : __dirname + '/../node_modules/laravel-elixir/icons/laravel.png',
                 message : ' '
             }));
-    }).watch(baseDir + '/**/**/*.js');
+    }).watch(srcDir);
 
 });

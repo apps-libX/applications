@@ -18,10 +18,13 @@ elixir(function(mix){
 	'use strict';
 
 	mix
-		.bower()
-		.angular('./app_component/**/**/angular/')
-		.sass('./app_component/**/**/angular/**/**/**/*.scss', 'public/css')
-		.copy('./app_component/**/**/angular/**/**/**/*.html', 'public/views/');
+		.angular([
+			'./app_components/anwendungen/applications/angular/main.js',
+			'./app_components/anwendungen/applications/angular/**/**/**/*.js',
+			'./app_components/onderdelen/jwt_auth/angular/**/**/**/*.js',
+		])
+		.sass('./app_components/**/**/angular/**/**/**/*.scss', 'public/css')
+		.copy('./app_components/**/**/angular/**/**/**/*.html', 'public/views/');
 });
 
 /*
