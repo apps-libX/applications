@@ -4,5 +4,5 @@
   "components"    : [
     "onderdelen/jwt_auth"
   ],
-  "mode": ""
+  "publish"       : false
 }
