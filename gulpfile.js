@@ -1,4 +1,6 @@
-var elixir = require('laravel-elixir');
+var elixir = require('laravel-elixir'),
+    build  = require('./gulp.build.json');
+
 require('./tasks/angular.task.js');
 require('./tasks/bower.task.js');
 require('laravel-elixir-livereload');
@@ -14,38 +16,26 @@ require('laravel-elixir-livereload');
  |
  */
 
-elixir(function(mix){
-	'use strict';
+elixir(function(mix) {
+    'use strict';
 
-	mix
-		.angular([
-			'./app_components/anwendungen/applications/angular/main.js',
-			'./app_components/anwendungen/applications/angular/**/**/**/*.js',
-			'./app_components/onderdelen/jwt_auth/angular/**/**/**/*.js',
-		])
-		.sass('./app_components/**/**/angular/**/**/**/*.scss', 'public/css')
-		.copy('./app_components/anwendungen/applications/angular/**/**/**/*.html', 'public/views/')
-		.copy('./app_components/onderdelen/jwt_auth/angular/**/**/**/*.html', 'public/views/');
+    mix
+        .bower()
+        .angular([
+            './' + build.base_directory + '/' + build.application + '/angular/main.js',
+            './' + build.base_directory + '/' + build.application + '/angular/**/**/**/*.js',
+            './' + build.base_directory + '/' + build.components[0] + '/angular/**/**/**/*.js',
+        ])
+        .sass('./' + build.base_directory + '/**/**/angular/**/**/**/*.scss', 'public/css')
+        .copy('./' + build.base_directory + '/' + build.application + '/angular/**/**/**/*.html', 'public/views/')
+        .copy('./' + build.base_directory + '/' + build.components[0] + '/angular/**/**/**/*.html', 'public/views/')
+        .livereload([
+            'public/js/vendor.js',
+            'public/js/app.js',
+            'public/css/vendor.css',
+            'public/css/app.css',
+            'public/views/!**!/!*.html'
+        ], { liveCSS: true })
+        .phpUnit();
 });
 
-/*
-elixir(function(mix){
-	mix
-		.bower()
-		.angular('./angular/')
-		.less('./angular/!**!/!*.less', 'public/css')
-		.copy('./angular/dashboard/!**!/!*.html', 'public/views/dashboard/')
-		.copy('./angular/app/!**!/!*.html', 'public/views/app/')
-		.copy('./angular/static/!**!/!*.html', 'public/views/static/')
-		.copy('./angular/directives/!**!/!*.html', 'public/views/directives/')
-		.copy('./angular/dialogs/!**!/!*.html', 'public/views/dialogs/')
-		.livereload([
-			'public/js/vendor.js',
-			'public/js/app.js',
-			'public/css/vendor.css',
-			'public/css/app.css',
-			'public/views/!**!/!*.html'
-		], {liveCSS: true})
-		.phpUnit();
-});
-*/
