@@ -24,7 +24,8 @@ elixir(function(mix){
 			'./app_components/onderdelen/jwt_auth/angular/**/**/**/*.js',
 		])
 		.sass('./app_components/**/**/angular/**/**/**/*.scss', 'public/css')
-		.copy('./app_components/**/**/angular/**/**/**/*.html', 'public/views/');
+		.copy('./app_components/anwendungen/applications/angular/**/**/**/*.html', 'public/views/')
+		.copy('./app_components/onderdelen/jwt_auth/angular/**/**/**/*.html', 'public/views/');
 });
 
 /*
