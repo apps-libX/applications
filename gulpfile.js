@@ -35,7 +35,11 @@ elixir(function(mix) {
             './' + build.base_directory + build.application + 'angular/**/**/**/*.js',
             './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.js',
         ])
-        .sass('./' + build.base_directory + build.sass_directory + 'angular/**/**/**/*.scss', 'public/css')
+        //.sass('./' + build.base_directory + build.sass_directory + 'angular/**/**/**/*.scss', 'public/css')
+        .sass([
+            './' + build.base_directory + build.application + 'angular/**/**/**/*.scss',
+            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.scss'
+        ], 'public/css')
         .copy('./' + build.base_directory + build.application + 'angular/**/**/**/*.html', 'public/views/')
         .copy('./' + build.base_directory + build.components[0] + 'angular/**/**/**/*.html', 'public/views/')
         .livereload([

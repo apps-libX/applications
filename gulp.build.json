@@ -4,6 +4,5 @@
   "components"    : [
     "onderdelen/jwt_auth/"
   ],
-  "sass_directory": "**/**/",
   "published"     : false
 }
