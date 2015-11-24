@@ -22,7 +22,10 @@ elixir(function(mix) {
     if (build.published) {
         build.base_directory = "";
         build.application    = "";
-        build.components     = "";
+
+        for (var i = 0; i < build.components.length; i++) {
+            build.components[i] = "";
+        }
     }
 
     mix
