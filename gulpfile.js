@@ -19,23 +19,29 @@ require('laravel-elixir-livereload');
 elixir(function(mix) {
     'use strict';
 
+    if (build.published) {
+        build.base_directory = "";
+        build.application    = "";
+        build.components     = "";
+    }
+
     mix
         //.bower()
         .angular([
-            './' + build.base_directory + '/' + build.application + '/angular/main.js',
-            './' + build.base_directory + '/' + build.application + '/angular/**/**/**/*.js',
-            './' + build.base_directory + '/' + build.components[0] + '/angular/**/**/**/*.js',
+            './' + build.base_directory + build.application + 'angular/main.js',
+            './' + build.base_directory + build.application + 'angular/**/**/**/*.js',
+            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.js',
         ])
-        //.sass('./' + build.base_directory + '/**/**/angular/**/**/**/*.scss', 'public/css')
-        .copy('./' + build.base_directory + '/' + build.application + '/angular/**/**/**/*.html', 'public/views/')
-        .copy('./' + build.base_directory + '/' + build.components[0] + '/angular/**/**/**/*.html', 'public/views/')
+        //.sass('./' + build.base_directory + build.sass_directory + 'angular/**/**/**/*.scss', 'public/css')
+        .copy('./' + build.base_directory + build.application + 'angular/**/**/**/*.html', 'public/views/')
+        .copy('./' + build.base_directory + build.components[0] + 'angular/**/**/**/*.html', 'public/views/')
         .livereload([
             'public/js/vendor.js',
             'public/js/app.js',
             'public/css/vendor.css',
             'public/css/app.css',
             'public/views/!**!/!*.html'
-        ], { liveCSS: true })
+        ], { liveCSS: true });
         //.phpUnit();
 });
 
