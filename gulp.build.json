@@ -1,6 +1,6 @@
 {
   "base_directory": "app_components",
-  "application"   : "onwendungen/applications",
+  "application"   : "anwendungen/applications",
   "components"    : [
     "onderdelen/jwt_auth"
   ],
