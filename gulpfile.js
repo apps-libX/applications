@@ -51,4 +51,3 @@ elixir(function(mix) {
         ], { liveCSS: true })
         .phpUnit();
 });
-
