@@ -31,7 +31,9 @@ elixir(function(mix) {
     mix
         .bower()
         .angular([
-            './' + build.base_directory + build.application + 'angular/main.js',
+            './' + build.base_directory + build.application + 'angular/modules/app.core.module.js',
+            './' + build.base_directory + build.application + 'angular/modules/components.module.js',
+            './' + build.base_directory + build.application + 'angular/modules/application.module.js',
             './' + build.base_directory + build.application + 'angular/**/**/**/*.js',
             './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.js',
         ])
