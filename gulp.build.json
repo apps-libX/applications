@@ -2,7 +2,7 @@
   "base_directory": "app_components/",
   "application"   : "anwendungen/applications/",
   "components"    : [
-    "onderdelen/jwt_auth/"
+    "onderdelen/jwt-auth/"
   ],
   "published"     : false
 }
