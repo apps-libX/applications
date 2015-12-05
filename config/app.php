@@ -145,7 +145,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Applications\ApplicationsServiceProvider::class,
+        Anwendungen\Applications\ApplicationsServiceProvider::class,
 
     ],
 
