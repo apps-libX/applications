@@ -2,7 +2,7 @@
   "base_directory": "app_components/",
   "application"   : "anwendungen/applications/",
   "components"    : [
-    "onderdelen/jwt-auth/"
+    "apps-libX/jwt-auth/"
   ],
   "published"     : false
 }
