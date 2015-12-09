@@ -31,13 +31,12 @@ elixir(function(mix) {
     mix
         .bower()
         .angular([
-            './' + build.base_directory + build.application + 'angular/modules/app.core.module.js',
-            './' + build.base_directory + build.application + 'angular/modules/components.module.js',
-            './' + build.base_directory + build.application + 'angular/modules/application.module.js',
+            './' + build.base_directory + build.application + 'angular/main.module.js',
+            './' + build.base_directory + build.components[0] + 'angular/*.module.js',
+            './' + build.base_directory + build.application + 'angular/application.module.js',
             './' + build.base_directory + build.application + 'angular/**/**/**/*.js',
-            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.js',
+            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.js'
         ])
-        //.sass('./' + build.base_directory + build.sass_directory + 'angular/**/**/**/*.scss', 'public/css')
         .sass([
             './' + build.base_directory + build.application + 'angular/**/**/**/*.scss',
             './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.scss'
@@ -53,3 +52,5 @@ elixir(function(mix) {
         ], { liveCSS: true })
         .phpUnit();
 });
+
+require('gulp').task('generate', require('./tasks/generators/tasks/generate.js'));
