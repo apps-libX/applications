@@ -53,4 +53,4 @@ elixir(function(mix) {
         .phpUnit();
 });
 
-require('gulp').task('generate', require('./tasks/generators/tasks/generate.js'));
+require('gulp').task('generate', require('./tasks/generators/tasks/generate.js').generate);
