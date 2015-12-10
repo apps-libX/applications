@@ -2,6 +2,8 @@
   "base_directory": "app_components/",
   "application"   : "anwendungen/applications/",
   "components"    : [
+    "onderdelen/dashboard/",
+    "onderdelen/client/",
     "apps-libX/jwt-auth/"
   ],
   "published"     : false

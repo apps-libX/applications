@@ -33,16 +33,24 @@ elixir(function(mix) {
         .angular([
             './' + build.base_directory + build.application + 'angular/main.module.js',
             './' + build.base_directory + build.components[0] + 'angular/*.module.js',
+            './' + build.base_directory + build.components[1] + 'angular/*.module.js',
+            './' + build.base_directory + build.components[2] + 'angular/*.module.js',
             './' + build.base_directory + build.application + 'angular/application.module.js',
             './' + build.base_directory + build.application + 'angular/**/**/**/*.js',
-            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.js'
+            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.js',
+            './' + build.base_directory + build.components[1] + 'angular/**/**/**/*.js',
+            './' + build.base_directory + build.components[2] + 'angular/**/**/**/*.js'
         ])
         .sass([
             './' + build.base_directory + build.application + 'angular/**/**/**/*.scss',
-            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.scss'
+            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.scss',
+            './' + build.base_directory + build.components[1] + 'angular/**/**/**/*.scss',
+            './' + build.base_directory + build.components[2] + 'angular/**/**/**/*.scss'
         ], 'public/css')
         .copy('./' + build.base_directory + build.application + 'angular/**/**/**/*.html', 'public/views/')
         .copy('./' + build.base_directory + build.components[0] + 'angular/**/**/**/*.html', 'public/views/')
+        .copy('./' + build.base_directory + build.components[1] + 'angular/**/**/**/*.html', 'public/views/')
+        .copy('./' + build.base_directory + build.components[2] + 'angular/**/**/**/*.html', 'public/views/')
         .livereload([
             'public/js/vendor.js',
             'public/js/app.js',
