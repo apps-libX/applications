@@ -1,6 +1,17 @@
 <?php
 
 return [
+    'token_secret' => 'some random string',
+    'facebook_secret' => '',
+    'foursquare_secret' => '',
+    'google_secret' => '',
+    'github_secret' => '',
+    'instagram_secret' => '',
+    'linkedin_secret' => '',
+    'live_secret' => '',
+    'yahoo_secret' => '',
+    'twitter_key' => '',
+    'twitter_secret' => '',
 
     /*
     |--------------------------------------------------------------------------
