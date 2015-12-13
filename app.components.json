@@ -1,9 +1,0 @@
-{
-  "app-components-directory": "app_components",
-  "require"             : {
-    "anwendungen/applications": "@dev"
-  },
-  "require-dev"         : {
-    "consigliere/generators": "@dev"
-  }
-}
