@@ -20,11 +20,11 @@ elixir(function(mix) {
     'use strict';
 
     if (build.published) {
-        build.base_directory = "";
-        build.application    = "";
+        build.base_directory = '';
+        build.application    = '';
 
         for (var i = 0; i < build.components.length; i++) {
-            build.components[i] = "";
+            build.components[i] = '';
         }
     }
 
@@ -39,7 +39,7 @@ elixir(function(mix) {
             'public/css/vendor.css',
             'public/css/app.css',
             'public/views/!**!/!*.html'
-        ], { liveCSS: true })
+        ], {liveCSS: true})
         .phpUnit();
 });
 
