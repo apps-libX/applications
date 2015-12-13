@@ -2,6 +2,7 @@
   "base_directory": "app_components/",
   "application"   : "anwendungen/applications/",
   "components"    : [
+    "consigliere/app-foundation/",
     "onderdelen/dashboard/",
     "onderdelen/client/",
     "onderdelen/jwt-auth/"

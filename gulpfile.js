@@ -30,27 +30,9 @@ elixir(function(mix) {
 
     mix
         .bower()
-        .angular([
-            './' + build.base_directory + build.application + 'angular/main.module.js',
-            './' + build.base_directory + build.components[0] + 'angular/*.module.js',
-            './' + build.base_directory + build.components[1] + 'angular/*.module.js',
-            './' + build.base_directory + build.components[2] + 'angular/*.module.js',
-            './' + build.base_directory + build.application + 'angular/application.module.js',
-            './' + build.base_directory + build.application + 'angular/**/**/**/*.js',
-            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.js',
-            './' + build.base_directory + build.components[1] + 'angular/**/**/**/*.js',
-            './' + build.base_directory + build.components[2] + 'angular/**/**/**/*.js'
-        ])
-        .sass([
-            './' + build.base_directory + build.application + 'angular/**/**/**/*.scss',
-            './' + build.base_directory + build.components[0] + 'angular/**/**/**/*.scss',
-            './' + build.base_directory + build.components[1] + 'angular/**/**/**/*.scss',
-            './' + build.base_directory + build.components[2] + 'angular/**/**/**/*.scss'
-        ], 'public/css')
-        .copy('./' + build.base_directory + build.application + 'angular/**/**/**/*.html', 'public/views/')
-        .copy('./' + build.base_directory + build.components[0] + 'angular/**/**/**/*.html', 'public/views/')
-        .copy('./' + build.base_directory + build.components[1] + 'angular/**/**/**/*.html', 'public/views/')
-        .copy('./' + build.base_directory + build.components[2] + 'angular/**/**/**/*.html', 'public/views/')
+        .angular(angularDirectory())
+        .sass(sassDirectory(), 'public/css')
+        .copy(copyDirectory(), 'public/views/')
         .livereload([
             'public/js/vendor.js',
             'public/js/app.js',
@@ -62,3 +44,65 @@ elixir(function(mix) {
 });
 
 require('gulp').task('generate', require('./tasks/generators/tasks/generate.js').generate);
+
+function angularDirectory() {
+    'use strict';
+    var ngMod = ngModFn(),
+        ngDir = ngDirFn();
+
+    return ngMod.concat(ngDir);
+}
+
+function sassDirectory() {
+    'use strict';
+    return sassDirFn();
+}
+
+function copyDirectory() {
+    'use strict';
+    return cpDirFn();
+}
+
+function ngModFn() {
+    'use strict';
+    var n = [];
+    for (var x = 0; x < build.components.length; x++) {
+        n.push('./' + build.base_directory + build.components[x] + 'angular/*.module.js');
+    }
+
+    n.push('./' + build.base_directory + build.application + 'angular/*.module.js');
+
+    return n;
+}
+
+function ngDirFn() {
+    'use strict';
+    var m = ['./' + build.base_directory + build.application + 'angular/**/**/**/*.js'];
+    for (var y = 0; y < build.components.length; y++) {
+        m.push('./' + build.base_directory + build.components[y] + 'angular/**/**/**/*.js');
+    }
+
+    return m;
+}
+
+function sassDirFn() {
+    'use strict';
+    var m = ['./' + build.base_directory + build.application + 'angular/**/**/**/*.scss'];
+    for (var y = 0; y < build.components.length; y++) {
+        m.push('./' + build.base_directory + build.components[y] + 'angular/**/**/**/*.scss');
+    }
+
+    return m;
+}
+
+function cpDirFn() {
+    'use strict';
+
+    var c = ['./' + build.base_directory + build.application + 'angular/**/**/**/*.html'];
+    for (var d = 0; d < build.components.length; d++) {
+        c.push('./' + build.base_directory + build.components[d] + 'angular/**/**/**/*.html');
+    }
+
+    return c;
+}
+
