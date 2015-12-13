@@ -4,7 +4,7 @@
   "components"    : [
     "onderdelen/dashboard/",
     "onderdelen/client/",
-    "apps-libX/jwt-auth/"
+    "onderdelen/jwt-auth/"
   ],
   "published"     : false
 }
