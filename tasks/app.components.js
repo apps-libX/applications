@@ -2,7 +2,8 @@
  * Created by anonymous on 14/12/15 4:45.
  */
 
-var appComponents = require('./app.components.json');
+var appPath = require('./../gulp.app.path.json'),
+    appComponents = require('./../' + appPath.angular_directory + appPath.application + 'angular/data/app.components.json');
 
 var path = {
     angularDirectory: angularDirectory,
