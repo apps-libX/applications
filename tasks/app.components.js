@@ -2,7 +2,7 @@
  * Created by anonymous on 14/12/15 4:45.
  */
 
-var appPath = require('./../gulp.app.path.json'),
+var appPath = require('./app.components.config.json'),
     appComponents = require('./../' + appPath.angular_directory + appPath.application + 'angular/data/app.components.json');
 
 var path = {
@@ -10,8 +10,6 @@ var path = {
     sassDirectory   : sassDirectory,
     copyDirectory   : copyDirectory
 };
-
-
 
 //////////////////////////////
 
