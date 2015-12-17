@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
 
-class DatabaseSeeder extends Seeder
+class SentinelDatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,10 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
+        \Eloquent::unguard();
 
-        // $this->call(UserTableSeeder::class);
-
-        Model::reguard();
+        // $this->call('UserTableSeeder');
+        $this->call('SentryGroupSeeder');
+        $this->call('SentryUserSeeder');
+        $this->call('SentryUserGroupSeeder');
     }
 }
