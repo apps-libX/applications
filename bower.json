@@ -36,7 +36,9 @@
     "angular-sanitize": "~1.4.8",
     "install": "~1.0.4",
     "angular-toastr": "~1.6.0",
-    "angular-gettext": "~2.1.2"
+    "angular-gettext": "~2.1.2",
+    "angular-treasure-overlay-spinner": "~1.1.0",
+    "angular-bootstrap": "~0.14.3"
   },
   "resolutions": {
     "angular": ">=1.0.8"
