@@ -120,7 +120,7 @@ return array(
         |
         */
 
-        'model' => 'AppsLibX\JwtAuth\Models\User',
+        'model' => 'Onderdelen\JwtAuth\Models\User',
 
         /*
         |--------------------------------------------------------------------------
