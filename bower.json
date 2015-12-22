@@ -34,11 +34,11 @@
     "angular-toastr": "~1.6.0",
     "angular-gettext": "~2.1.2",
     "angular-treasure-overlay-spinner": "~1.1.0",
-    "angular-bootstrap": "~0.13.2",
     "jquery": "~2.1.4",
     "foundation-sites": "~6.0.6",
     "foundation-apps": "~1.2.0",
-    "angular-material": "~1.0.1"
+    "angular-material": "~1.0.1",
+    "angular-bootstrap": "~0.14.3"
   },
   "resolutions": {
     "angular": ">=1.0.8",
