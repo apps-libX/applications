@@ -30,9 +30,9 @@ Elixir.extend('bower', function(jsOutputFile, jsOutputFolder, cssOutputFile, css
 
     var onError = function(err) {
         notify.onError({
-            title   : "Laravel Elixir",
-            subtitle: "Bower Files Compilation Failed!",
-            message : "Error: <%= error.message %>",
+            title   : 'Laravel Elixir',
+            subtitle: 'Bower Files Compilation Failed!',
+            message : 'Error: <%= error.message %>',
             icon    : __dirname + '/../node_modules/laravel-elixir/icons/fail.png'
         })(err);
         this.emit('end');
@@ -42,7 +42,7 @@ Elixir.extend('bower', function(jsOutputFile, jsOutputFolder, cssOutputFile, css
         return gulp.src(mainBowerFiles())
             .on('error', onError)
             .pipe(filter('**/*.js'))
-            .pipe(concat(jsFile, { sourcesContent: true }))
+            .pipe(concat(jsFile, {sourcesContent: true}))
             .pipe(gulpIf(Elixir.config.production, uglify()))
             .pipe(gulp.dest(jsOutputFolder || Elixir.config.js.outputFolder))
             .pipe(notify({
