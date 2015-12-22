@@ -36,7 +36,9 @@
     "angular-gettext": "~2.1.2",
     "angular-treasure-overlay-spinner": "~1.1.0",
     "angular-bootstrap": "~0.13.2",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "foundation-sites": "~6.0.6",
+    "foundation-apps": "~1.2.0"
   },
   "resolutions": {
     "angular": ">=1.0.8",
