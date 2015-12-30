@@ -3,6 +3,7 @@ var elixir = require('laravel-elixir'),
 
 require('./tasks/angular.task.js');
 require('./tasks/bower.task.js');
+require('./tasks/ngHtml2Js.task.js');
 require('laravel-elixir-livereload');
 
 /*
@@ -22,10 +23,12 @@ elixir(function(mix) {
     mix
         .bower()
         .angular(path.angularDirectory())
+        .ngHtml2Js(path.htmlDirectory())
         .sass(path.sassDirectory(), 'public/css')
         .copy(path.copyDirectory(), 'public/views/')
         .livereload([
             'public/js/vendor.js',
+            'public/js/partials.js',
             'public/js/app.js',
             'public/css/vendor.css',
             'public/css/app.css',

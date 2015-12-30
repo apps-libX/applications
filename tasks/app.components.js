@@ -8,7 +8,8 @@ var appPath = require('./app.components.config.json'),
 var path = {
     angularDirectory: angularDirectory,
     sassDirectory   : sassDirectory,
-    copyDirectory   : copyDirectory
+    copyDirectory   : copyDirectory,
+    htmlDirectory   : htmlDirectory
 };
 
 //////////////////////////////
@@ -40,6 +41,12 @@ function sassDirectory() {
 }
 
 function copyDirectory() {
+    'use strict';
+
+    return cpDirFn();
+}
+
+function htmlDirectory() {
     'use strict';
 
     return cpDirFn();
