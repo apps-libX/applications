@@ -25,7 +25,7 @@ elixir(function(mix) {
         .angular(path.angularDirectory())
         .ngHtml2Js(path.htmlDirectory())
         .sass(path.sassDirectory(), 'public/css')
-        .copy(path.copyDirectory(), 'public/views/')
+        //.copy(path.copyDirectory(), 'public/views/')
         .livereload([
             'public/js/vendor.js',
             'public/js/partials.js',
