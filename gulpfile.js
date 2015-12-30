@@ -31,8 +31,7 @@ elixir(function(mix) {
             'public/js/partials.js',
             'public/js/app.js',
             'public/css/vendor.css',
-            'public/css/app.css',
-            'public/views/!**!/!*.html'
+            'public/css/app.css'
         ], {liveCSS: true})
         .phpUnit();
 });
