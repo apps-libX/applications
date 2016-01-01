@@ -24,7 +24,8 @@ Elixir.extend('angular', function(src, output, outputFilename) {
     //var baseDir = src || Elixir.config.assetsPath + '/angular/';
     var srcDir = src || Elixir.config.assetsPath + '/angular/';
 
-    new Task('angular in ' + srcDir, function() {
+    //new Task('angular in ' + srcDir, function() {
+    new Task('angular in... ', function() {
         // Main file has to be included first.
         return gulp.src(srcDir)
             .pipe(jshint())
