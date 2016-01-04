@@ -32,8 +32,8 @@ elixir(function(mix) {
             'public/js/app.js',
             'public/css/vendor.css',
             'public/css/app.css'
-        ], {liveCSS: true})
-        .phpUnit();
+        ], {liveCSS: true});
+        //.phpUnit();
 });
 
 require('gulp').task('generate', require('./tasks/generators/tasks/generate.js').generate);
