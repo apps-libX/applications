@@ -1,4 +1,9 @@
 <?php
+/**
+ * hashids.php
+ * Modified from https://github.com/rydurham/Sentinel
+ * by anonymous on 13/01/16 1:55.
+ */
 
 return [
 
@@ -13,8 +18,7 @@ return [
     |
     */
 
-    'default' => 'main',
-
+    'default'     => 'main',
     /*
     |--------------------------------------------------------------------------
     | Hashids Connections
@@ -28,18 +32,17 @@ return [
 
     'connections' => [
 
-        'main' => [
-            'salt' => 'F28F86043514AEB26943F1A67F21B94251201F322199855F1DF1B982E3CF7C92',
-            'length' => 6,
-            'alphabet' => 'abcdefghijklmnopqrstuvwxyz1234567890'
+        'main'        => [
+            'salt'     => 'F28F86043514AEB26943F1A67F21B94251201F322199855F1DF1B982E3CF7C92',
+            'length'   => 6,
+            'alphabet' => 'abcdefghijklmnopqrstuvwxyz1234567890',
         ],
-
         'alternative' => [
-            'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
-            'alphabet' => 'your-alphabet-string'
+            'salt'     => 'your-salt-string',
+            'length'   => 'your-length-integer',
+            'alphabet' => 'your-alphabet-string',
         ],
 
-    ]
+    ],
 
 ];

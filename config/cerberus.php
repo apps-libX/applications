@@ -1,4 +1,9 @@
 <?php
+/**
+ * cerberus.php
+ * Modified from https://github.com/rydurham/Sentinel
+ * by anonymous on 13/01/16 1:55.
+ */
 
 return [
 
@@ -29,7 +34,7 @@ return [
     | Allow Usernames
     |--------------------------------------------------------------------------
     |
-    | By default, Sentry (and Sentinel) will only let a user log in using their
+    | By default, Sentry (and Cerberus) will only let a user log in using their
     | email address.  By setting 'allow_usernames' to true, a user can enter either
     | their username or their email address as a login credential.
     |
@@ -93,7 +98,7 @@ return [
     | Default Routing
     |--------------------------------------------------------------------------
     |
-    | Sentinel provides default routes for its sessions, users and groups.
+    | Cerberus provides default routes for its sessions, users and groups.
     | You can use them as is, or you can disable them entirely.
     |
     */
@@ -112,7 +117,7 @@ return [
 
     'routing'                   => [
         'session_store'                => ['route' => 'home'],
-        'session_destroy'              => ['action' => '\\Sentinel\Controllers\SessionController@create'],
+        'session_destroy'              => ['action' => '\\Cerberus\Controllers\SessionController@create'],
         'registration_complete'        => ['route' => 'home'],
         'registration_activated'       => ['route' => 'home'],
         'registration_resend'          => ['route' => 'home'],
@@ -120,20 +125,20 @@ return [
         'registration_reset_invalid'   => ['route' => 'home'],
         'registration_reset_complete'  => ['route' => 'home'],
         'users_invalid'                => ['route' => 'home'],
-        'users_store'                  => ['route' => 'sentinel.users.index'],
-        'users_update'                 => ['route' => 'sentinel.users.show', 'parameters' => ['user' => 'hash']],
-        'users_destroy'                => ['route' => 'sentinel.users.index'],
-        'users_change_password'        => ['route' => 'sentinel.users.show', 'parameters' => ['user' => 'hash']],
-        'users_change_memberships'     => ['route' => 'sentinel.users.show', 'parameters' => ['user' => 'hash']],
-        'users_suspend'                => ['route' => 'sentinel.users.index'],
-        'users_unsuspend'              => ['route' => 'sentinel.users.index'],
-        'users_ban'                    => ['route' => 'sentinel.users.index'],
-        'users_unban'                  => ['route' => 'sentinel.users.index'],
-        'groups_store'                 => ['route' => 'sentinel.groups.index'],
-        'groups_update'                => ['route' => 'sentinel.groups.index'],
-        'groups_destroy'               => ['route' => 'sentinel.groups.index'],
-        'profile_change_password'      => ['route' => 'sentinel.profile.show'],
-        'profile_update'               => ['route' => 'sentinel.profile.show'],
+        'users_store'                  => ['route' => 'cerberus.users.index'],
+        'users_update'                 => ['route' => 'cerberus.users.show', 'parameters' => ['user' => 'hash']],
+        'users_destroy'                => ['route' => 'cerberus.users.index'],
+        'users_change_password'        => ['route' => 'cerberus.users.show', 'parameters' => ['user' => 'hash']],
+        'users_change_memberships'     => ['route' => 'cerberus.users.show', 'parameters' => ['user' => 'hash']],
+        'users_suspend'                => ['route' => 'cerberus.users.index'],
+        'users_unsuspend'              => ['route' => 'cerberus.users.index'],
+        'users_ban'                    => ['route' => 'cerberus.users.index'],
+        'users_unban'                  => ['route' => 'cerberus.users.index'],
+        'groups_store'                 => ['route' => 'cerberus.groups.index'],
+        'groups_update'                => ['route' => 'cerberus.groups.index'],
+        'groups_destroy'               => ['route' => 'cerberus.groups.index'],
+        'profile_change_password'      => ['route' => 'cerberus.profile.show'],
+        'profile_update'               => ['route' => 'cerberus.profile.show'],
     ],
     /*
     |--------------------------------------------------------------------------
@@ -153,7 +158,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | There are situations in which you may not want to display any views
-    | when interacting with Sentinel.  To return JSON instead of HTML,
+    | when interacting with Cerberus.  To return JSON instead of HTML,
     | turn this setting off. This cannot be done selectively.
     |
     */
@@ -164,12 +169,12 @@ return [
     | Master Layout
     |--------------------------------------------------------------------------
     |
-    | By default Sentinel views will extend their own master layout. However,
+    | By default Cerberus views will extend their own master layout. However,
     | you can specify a custom master layout view to use instead.
     |
     */
 
-    'layout'                    => 'Sentinel::layouts.default',
+    'layout'                    => 'Cerberus::layouts.default',
     /*
     |--------------------------------------------------------------------------
     | Email Views
@@ -181,8 +186,8 @@ return [
 
     'emails'                    => [
         'views' => [
-            'welcome' => 'Sentinel::emails.welcome',
-            'reset'   => 'Sentinel::emails.reset',
+            'welcome' => 'Cerberus::emails.welcome',
+            'reset'   => 'Cerberus::emails.reset',
         ],
     ],
 
