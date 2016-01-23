@@ -21,19 +21,19 @@ elixir(function(mix) {
     'use strict';
 
     mix
-        .bower()
+        //.bower()
         .angular(path.angularDirectory())
         .ngHtml2Js(path.htmlDirectory())
-        .sass(path.sassDirectory(), 'public/css')
-        //.copy(path.copyDirectory(), 'public/views/')
-        .livereload([
-            'public/js/vendor.js',
-            'public/js/partials.js',
-            'public/js/app.js',
-            'public/css/vendor.css',
-            'public/css/app.css'
-        ], {liveCSS: true});
-        //.phpUnit();
+        .sass(path.sassDirectory(), 'public/css');
+    //.copy(path.copyDirectory(), 'public/views/')
+    //.livereload([
+    //    'public/js/vendor.js',
+    //    'public/js/partials.js',
+    //    'public/js/app.js',
+    //    'public/css/vendor.css',
+    //    'public/css/app.css'
+    //], {liveCSS: true});
+    //.phpUnit();
 });
 
 require('gulp').task('generate', require('./tasks/generators/tasks/generate.js').generate);
