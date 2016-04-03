@@ -1,0 +1,14 @@
+{
+  "base_directory": "app_components/",
+  "application"   : "anwendungen/applications/",
+  "components"    : [
+    "teemat/quetzalcoatl/",
+    "componeint/app-foundation/",
+    "componeint/seneschal/",
+    "componeint/dashboard/",
+    "componeint/pages/",
+    "componeint/posts/",
+    "componeint/client/"
+  ],
+  "published"     : false
+}

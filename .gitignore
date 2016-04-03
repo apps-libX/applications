@@ -1,7 +1,4 @@
-/vendor
-/node_modules
-Homestead.yaml
-Homestead.json
-.env
-/bower_components
-/app_components
+build
+composer.lock
+docs
+vendor
